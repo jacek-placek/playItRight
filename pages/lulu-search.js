@@ -6,6 +6,7 @@ exports.LuluSearchPage = class LuluSearchPage {
     constructor(page) {
         this.page = page;
         this.searchInputField = page.getByTestId('Header-seacrh-input');
+        //this.searchResults = page.getByRole('listeitem')
     }
 
     async goto() {
@@ -15,4 +16,9 @@ exports.LuluSearchPage = class LuluSearchPage {
     async searchInputField() {
         await this.searchInputField.click();
     }
+
+    /*async searchResults() {
+
+
+    }*/
 }
