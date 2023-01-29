@@ -107,3 +107,8 @@ const config = {
 };
 
 module.exports = config;
+
+"env": 
+{
+  "portal_home_page": "https://www.lulu.com/search?page=1&q=&pageSize=10&adult_audience_rating=00"
+}
