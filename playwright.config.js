@@ -13,7 +13,7 @@ const { devices } = require('@playwright/test');
  * @type {import('@playwright/test').PlaywrightTestConfig}
  */
 const config = {
-  testDir: './tests',
+  testDir: './e2e',
   /* Maximum time one test can run for. */
   timeout: 30 * 1000,
   expect: {
@@ -107,8 +107,3 @@ const config = {
 };
 
 module.exports = config;
-
-env: 
-{
-  portal_home_page: "https://www.lulu.com/search?page=1&q=&pageSize=10&adult_audience_rating=00"
-}
