@@ -5,8 +5,9 @@ exports.LuluSearchPage = class LuluSearchPage {
 
     constructor(page) {
         this.page = page;
-        this.searchInputField = page.getByTestId('Header-seacrh-input');
-        //this.searchResults = page.getByRole('listeitem')
+        this.searchInputField = page.getByTestId('header-search-input');
+        this.searchResult = page.getByTestId('product-title');
+        //
     }
 
     async goto() {
@@ -14,11 +15,16 @@ exports.LuluSearchPage = class LuluSearchPage {
     }
 
     async searchInputField() {
-        await this.searchInputField.click();
+        await this.searchInputField.fill('');
     }
 
-    /*async searchResults() {
-
-
+// search results is not null
+    /*async searchResultIsNotNull() {
+        const count = await this.searchResult().count();
+        console.log(count);
     }*/
+
+// languange change
+
+// categories display
 }
