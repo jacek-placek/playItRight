@@ -21,11 +21,6 @@ exports.LuluSearchPage = class LuluSearchPage {
         await this.searchInputField.press('Enter');
     }
 
-    // async searchInputField() {
-    //     await this.searchInputField.click().fill('abc');
-    //     await this.searchInputField.press('Enter');
-    // }
-
     async searchResultIsNotNull() {
         var count = await this.searchResult.count();
         expect(count).toBeGreaterThanOrEqual(1);
