@@ -1,20 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const { LuluSearchPage } = require ('../pages/lulu-search.js')
 
-/*test('has title in other file', async ({ page }) => {
-    await page.goto('https://www.lulu.com/search?page=1&q=new&pageSize=10&adult_audience_rating=00');
-  
-    // Expect a title "to contain" a substring.
-    await expect(page).toHaveTitle(/Shop/);
-  });*/
-
-/*test('check page object have title', async ({ page }) => {
-    const luluSearch = new LuluSearchPage(page);
-    await luluSearch.goto();
-    await expect(page).toHaveTitle(/Shop/);
-
-})*/
-
 test('BKS-03001 Search for any product', async ({ page }) => {
     
     const luluSearch = new LuluSearchPage(page);
@@ -34,7 +20,7 @@ test('BKS-03001 Search for any product', async ({ page }) => {
     //4. check if result is null
 })*/
 
-/*test('BKS-03003 Search for non existing product', async ({ page }) => {
+test('BKS-03003 Search for non existing product', async ({ page }) => {
   //1. click on seacrh field
   //2. enter 'nienapisana' <-- or random string
   //3. click <enter>
@@ -45,7 +31,11 @@ test('BKS-03001 Search for any product', async ({ page }) => {
   await luluSearch.enterValueToSearchInputField('abacasda');
   await luluSearch.searchResultIsNull();
   await luluSearch.noResultMessage();
-  expect(noResultMessage).toBeVisible;
+  //expect(noResultMessage).toBeVisible;
+
+})
+
+/*test('BKS-03004 Display bookstore categories while searching', async ({ page }) => {
 
 })*/
 
@@ -73,3 +63,17 @@ test('BKS-03001 Search for any product', async ({ page }) => {
     const count = await page.getByTestId('produdct-title').count();
     expect(count).toBeLessThan(1);
   });*/
+
+  /*test('has title in other file', async ({ page }) => {
+    await page.goto('https://www.lulu.com/search?page=1&q=new&pageSize=10&adult_audience_rating=00');
+  
+    // Expect a title "to contain" a substring.
+    await expect(page).toHaveTitle(/Shop/);
+  });*/
+
+/*test('check page object have title', async ({ page }) => {
+    const luluSearch = new LuluSearchPage(page);
+    await luluSearch.goto();
+    await expect(page).toHaveTitle(/Shop/);
+
+})*/
