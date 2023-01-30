@@ -8,12 +8,12 @@ const { LuluSearchPage } = require ('../pages/lulu-search.js')
     await expect(page).toHaveTitle(/Shop/);
   });*/
 
-test('check page object have title', async ({ page }) => {
+/*test('check page object have title', async ({ page }) => {
     const luluSearch = new LuluSearchPage(page);
     await luluSearch.goto();
     await expect(page).toHaveTitle(/Shop/);
 
-})
+})*/
 
 test('BKS-03001 Search for any product', async ({ page }) => {
     

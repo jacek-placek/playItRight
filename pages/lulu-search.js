@@ -6,7 +6,8 @@ exports.LuluSearchPage = class LuluSearchPage {
     constructor(page) {
         this.page = page;
         this.searchInputField = page.getByTestId('header-search-input');
-        this.searchResult = page.getByTestId('product-title');
+        //this.searchResult = page.getByTestId('product-title');
+        this.searchResult = page.locator('.ProductItem_productItem____ATu');
         this.noSearchResults = page.getByRole('heading');
         this.languageChanger = page.getByTestId('search-facet-language');
         
@@ -23,10 +24,10 @@ exports.LuluSearchPage = class LuluSearchPage {
     }
 
     async searchResultIsNotNull() {
-        //var count = await this.searchResult.count();
-        //expect(count).toBeGreaterThanOrEqual(1);
-        var result = await this.searchResult 
-        expect(result).toBeVisible;
+        var count = await this.searchResult.count();
+        expect(count).toBeGreaterThanOrEqual(1);
+        //var result = await this.searchResult 
+        //expect(result).toBeVisible();
     }
 
     async searchResultIsNull() {
@@ -57,4 +58,3 @@ exports.LuluSearchPage = class LuluSearchPage {
 // languange change
 
 // categories display
-}
