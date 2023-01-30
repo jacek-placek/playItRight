@@ -26,8 +26,6 @@ exports.LuluSearchPage = class LuluSearchPage {
     async searchResultIsNotNull() {
         var count = await this.searchResult.count();
         expect(count).toBeGreaterThanOrEqual(1);
-        //var result = await this.searchResult 
-        //expect(result).toBeVisible();
     }
 
     async searchResultIsNull() {
@@ -36,7 +34,7 @@ exports.LuluSearchPage = class LuluSearchPage {
     }
 
     async noReasultsMessage() {
-        await this.noSearchResults().toHaveText('No search results')
+        expect(this.noSearchResults()).toHaveText('No search results')
     }
 
     async changeLanguage(chosenLanguage){
